@@ -381,3 +381,27 @@ function findIntersection(arr1, arr2) {
 }
 
 console.log('20, find the intersection of two arrays ---- ', findIntersection([1,2,3,4], [2,3,5,6])); //output: [2, 3]
+
+//#### 21. Write a function to calculate the Fibonacci sequence up to a given number 
+// the fibonacci series start with 0 and 1.
+// Each subsequent number is the sum of the two preceding numbers
+
+let n = 10;
+
+function fibonacciSeries(n) {
+
+  //Step 1: Initialize the fibonacci series with the first numbers
+
+  var fibonacci = [0, 1];
+
+  // Step 2: Start from index 2, as the first two numbers are already defined
+  for (let i = 2; i < n; i++) {
+    // Step 3: calculate the sum of the two preceding numbers
+    fibonacci[i] = (fibonacci[i - 1] + fibonacci[i - 2]);
+    console.log("🚀 ~ fibonacciSeries ~ fibonacci[i]:", fibonacci[i], fibonacci[i - 1], fibonacci[i - 2])
+  }
+  return fibonacci;
+}
+
+
+console.log('21. calculate the Fibonacci sequence up to a given number ---- ', fibonacciSeries(n));
